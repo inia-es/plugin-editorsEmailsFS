@@ -3,13 +3,16 @@
 /**
  * @file EditorsEmailsPlugin.inc.php
  *
- * Copyright (c) 2003-2009 John Willinsky
+ * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * A contribution from:
+ *	- 2014 Instituto Nacional de Investigacion y Tecnologia Agraria y Alimentaria
  *
  * @class EditorsEmailsPlugin
  * @ingroup plugins_generic_EditorsEmails
  *
- * @brief Google Analytics plugin class
+ * @brief Integrate OJS editorsEmais, insert in editordecisionEmail email to editors in FS.
  */
 
 // $Id: EditorsEmailsPlugin.inc.php,v 1.13 2009/09/22 21:20:37 asmecher Exp $
