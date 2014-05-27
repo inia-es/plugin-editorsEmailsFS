@@ -35,10 +35,6 @@ class editorsEmailsFSPlugin extends GenericPlugin {
 		if ($success) {
 			// Insert in email editor-athor mails editors   
 			HookRegistry::register('Templates::submission::comment::editorDecisionEmail', array($this, 'inserteditorsEmails'));
-
-			
-   
-			
 		}
 		return $success;
 	}
@@ -73,17 +69,12 @@ class editorsEmailsFSPlugin extends GenericPlugin {
 		} else {
 			$params['path'] = $path;
 		}
-
 		if (!empty($params['id'])) {
 			$params['path'] = array_merge($params['path'], array($params['id']));
 			unset($params['id']);
 		}
 		return $smarty->smartyUrl($params, $smarty);
 	}
-
-	
-
-
 
 	/**
 	 * Determine whether or not this plugin is enabled.
@@ -110,7 +101,6 @@ class editorsEmailsFSPlugin extends GenericPlugin {
 	 * Insert editorsEmails  page tag to editorDecisionEmail.tpl
 	 */  
 	function inserteditorsEmails($hookName, $params) {
-		
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
@@ -119,16 +109,13 @@ class editorsEmailsFSPlugin extends GenericPlugin {
 			import('classes.submission.editor.EditorSubmissionDAO');
 			$editorSubmissionDAO = new EditorSubmissionDAO;
 			$editordecisions = $editorSubmissionDAO->getEditorDecisions($articleId);
-	  	$decision = array_pop($editordecisions);
+		  	$decision = array_pop($editordecisions);
 
 			$currentJournal = $templateMgr->get_template_vars('currentJournal');
 	
 			if (!empty($currentJournal)) {
 				$journal =& Request::getJournal();
 				$journalId = $journal->getJournalId();
-
-//import('lib.pkp.classes.user.PKPUser');
-
 
                               $supportEmail = $journal->getSetting('supportEmail');
                               $supportName = $journal->getSetting('supportName');
@@ -137,7 +124,7 @@ class editorsEmailsFSPlugin extends GenericPlugin {
                               $bccontact [0]["name"] = $supportName;
                               $bccontact [0]["email"] = $supportEmail;
                               $templateMgr->assign('bccontact',$bccontact);
-                               $contactEmail = $journal->getSetting('contactEmail');
+                              $contactEmail = $journal->getSetting('contactEmail');
                               $contactName = $journal->getSetting('contacName');
 
                               $ccontact =array();
@@ -149,13 +136,8 @@ class editorsEmailsFSPlugin extends GenericPlugin {
                               }
                               $templateMgr->assign('bcc',$bccontact);
                               $templateMgr->assign('cc',$ccontact);                  
-		
-		
-//						$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageEditorsEmails.tpl'); 
-		
-				}
 			}
-		
+		}
 		return false;
 	}
 
