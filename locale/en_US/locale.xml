@@ -7,16 +7,15 @@
   * Copyright (c) 2003-2011 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  * editors Emails FS plugin localization strings for the en_US (U.S. English) locale.
   *
   * $Id$
   -->
  
 <locale name="en_US" full_name="U.S. English">
 
-	<!-- Google Analytics -->
 	<message key="plugins.generic.editorsEmailsFS.displayName">Insert emails Editors FS Plugin</message>
-	<message key="plugins.generic.editorsEmailsFS.description"><![CDATA[Integrate OJS editorsEmais, insert in editordecisionEmail email to editors in FS.]]></message>
+	<message key="plugins.generic.editorsEmailsFS.description">Integrate OJS editorsEmails, insert in editordecisionEmail email to editors in FS.</message>
 
 	
 </locale>
