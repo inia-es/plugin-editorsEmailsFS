@@ -130,11 +130,6 @@ class editorsEmailsFSPlugin extends GenericPlugin {
                               $ccontact =array();
                               $ccontact [0]["name"] = 'Ricardo Alia';
                               $ccontact [0]["email"] = 'alia@inia.es';
-                              if($decision[decision] ==1){
-                                 $bccontact [1]["name"] ='Diana Barba';
-                                 $bccontact [1]["email"] = 'editorial.secretary@inia.es';
-                              }
-                              $templateMgr->assign('bcc',$bccontact);
                               $templateMgr->assign('cc',$ccontact);                  
 			}
 		}
