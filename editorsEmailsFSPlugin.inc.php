@@ -123,7 +123,7 @@ class editorsEmailsFSPlugin extends GenericPlugin {
                               $bccontact =array();
                               $bccontact [0]["name"] = $supportName;
                               $bccontact [0]["email"] = $supportEmail;
-                              $templateMgr->assign('bccontact',$bccontact);
+                              $templateMgr->assign('bcc',$bccontact);
                               $contactEmail = $journal->getSetting('contactEmail');
                               $contactName = $journal->getSetting('contacName');
 
