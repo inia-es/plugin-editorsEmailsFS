@@ -128,8 +128,8 @@ class editorsEmailsFSPlugin extends GenericPlugin {
                               $contactName = $journal->getSetting('contacName');
 
                               $ccontact =array();
-                              $ccontact [0]["name"] = 'Ricardo Alia';
-                              $ccontact [0]["email"] = 'alia@inia.es';
+                              $ccontact [0]["name"] = 'Javier Madrigal';
+                              $ccontact [0]["email"] = 'chiefeditor.fs@inia.es';
                               $templateMgr->assign('cc',$ccontact);                  
 			}
 		}
